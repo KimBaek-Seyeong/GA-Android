@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="7dp"
+        android:paddingEnd="7dp"
+        android:background="@color/c_ffffff">
+        <LinearLayout
+            android:id="@+id/popup_register_image_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/popup_search_top_guide">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/popup_register_image_add_btn"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@color/c_f5f5f5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/image_add_btn"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popup_register_image_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toEndOf="@+id/popup_register_image_add_btn"
+                app:layout_constraintTop_toTopOf="@+id/popup_register_image_add_btn" />
+        </LinearLayout>
+
+        <com.goldax.goldax.layout.ShadowConstraintLayout
+            android:id="@+id/popup_register_item_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_popup_input_main_height"
+            android:layout_marginTop="@dimen/register_popup_rough_distance"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_register_image_layout">
+
+            <EditText
+                android:id="@+id/popup_register_item_title_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="7dp"
+                android:gravity="left|center_vertical"
+                android:hint="@string/register_item_title_hint"
+                android:includeFontPadding="false"
+                android:textSize="15sp"
+                android:singleLine="true"
+                android:background="@null"/>
+        </com.goldax.goldax.layout.ShadowConstraintLayout>
+
+        <com.goldax.goldax.layout.ShadowConstraintLayout
+            android:id="@+id/popup_register_item_desc_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_popup_input_detail_height"
+            android:layout_marginTop="@dimen/register_popup_rough_distance"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_register_item_title_layout">
+
+            <EditText
+                android:id="@+id/popup_register_item_desc_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="7dp"
+                android:gravity="left|center_vertical"
+                android:hint="@string/register_item_desc_hint"
+                android:includeFontPadding="false"
+                android:textSize="15sp"
+                android:background="@null"/>
+        </com.goldax.goldax.layout.ShadowConstraintLayout>
+
+        <com.goldax.goldax.layout.ShadowConstraintLayout
+            android:id="@+id/popup_register_item_category_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_popup_input_main_height"
+            android:layout_marginTop="@dimen/register_popup_rough_distance"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_register_item_desc_layout">
+
+            <Spinner
+                android:id="@+id/popup_register_item_category"
+                style="@style/SmallSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:entries="@array/category"
+                android:spinnerMode="dialog" />
+        </com.goldax.goldax.layout.ShadowConstraintLayout>
+
+        <com.goldax.goldax.layout.ShadowConstraintLayout
+            android:id="@+id/popup_register_item_location_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_popup_input_spinner_location_height"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/register_popup_rough_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_register_item_category_layout">
+
+            <Spinner
+                android:id="@+id/popup_register_item_location_1"
+                style="@style/SmallSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/register_popup_input_main_height"
+                android:entries="@array/location"
+                android:spinnerMode="dialog"
+                app:layout_constraintBottom_toTopOf="@+id/popup_register_item_location_2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/c_F6CE55"
+                app:layout_constraintTop_toBottomOf="@+id/popup_register_item_location_1" />
+
+            <Spinner
+                android:id="@+id/popup_register_item_location_2"
+                style="@style/SmallSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/register_popup_input_main_height"
+                android:entries="@array/location_1cam"
+                android:spinnerMode="dialog"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/popup_register_item_location_1" />
+        </com.goldax.goldax.layout.ShadowConstraintLayout>
+
+        <com.goldax.goldax.layout.ShadowConstraintLayout
+            android:id="@+id/popup_register_item_date_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_popup_input_main_height"
+            android:layout_marginTop="@dimen/register_popup_rough_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_register_item_location_layout">
+
+            <Spinner
+                android:id="@+id/popup_register_item_date_year"
+                style="@style/SmallSpinner"
+                android:layout_width="110dp"
+                android:layout_height="match_parent"
+                android:entries="@array/date_year"
+                app:layout_constraintStart_toStartOf="parent"
+                android:spinnerMode="dialog" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:text="년"
+                app:layout_constraintStart_toEndOf="@+id/popup_register_item_date_year"
+                app:layout_constraintTop_toTopOf="@+id/popup_register_item_date_year" />
+
+            <Spinner
+                android:id="@+id/popup_register_item_date_month"
+                style="@style/SmallSpinner"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:entries="@array/date_month"
+                android:spinnerMode="dialog"
+                app:layout_constraintStart_toEndOf="@+id/popup_register_item_date_year"
+                app:layout_constraintTop_toTopOf="@+id/popup_register_item_date_year" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:text="월"
+                app:layout_constraintStart_toEndOf="@+id/popup_register_item_date_month"
+                app:layout_constraintTop_toTopOf="@+id/popup_register_item_date_month" />
+
+            <Spinner
+                android:id="@+id/popup_register_item_date_day"
+                style="@style/SmallSpinner"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="30dp"
+                android:spinnerMode="dialog"
+                app:layout_constraintStart_toEndOf="@+id/popup_register_item_date_month"
+                app:layout_constraintTop_toTopOf="@+id/popup_register_item_date_month" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:gravity="center"
+                android:text="일"
+                app:layout_constraintStart_toEndOf="@+id/popup_register_item_date_day"
+                app:layout_constraintTop_toTopOf="@+id/popup_register_item_date_day" />
+        </com.goldax.goldax.layout.ShadowConstraintLayout>
+
+        <com.goldax.goldax.layout.ShadowConstraintLayout
+            android:id="@+id/popup_register_item_money_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/register_popup_input_main_height"
+            android:layout_marginTop="@dimen/register_popup_rough_distance"
+            android:padding="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_register_item_date_layout">
+
+            <EditText
+                android:id="@+id/popup_register_item_money_edit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="7dp"
+                android:gravity="left|center_vertical"
+                android:hint="@string/register_item_money_hint"
+                android:includeFontPadding="false"
+                android:textSize="12sp"
+                android:inputType="numberSigned"
+                android:background="@null"/>
+        </com.goldax.goldax.layout.ShadowConstraintLayout>
+
+        <TextView
+            android:id="@+id/popup_register_item_money_guide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="@dimen/register_popup_rough_distance"
+            android:gravity="left"
+            android:text="@string/register_item_money_guide"
+            android:textColor="@color/c_80272727"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/popup_register_item_money_layout" />
+
+        <Button
+            android:id="@+id/popup_register_submit_btn"
+            android:layout_width="150dp"
+            android:layout_height="@dimen/register_popup_input_main_height"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:text="@string/register_item_submit_btn"
+            style="@style/ButtonStyle"
+            app:layout_constraintTop_toBottomOf="@+id/popup_register_item_money_guide"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/popup_search_top_guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="5dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

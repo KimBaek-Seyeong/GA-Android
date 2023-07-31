@@ -1,0 +1,27 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">금도끼</string>
+
+    <string name="home_guide_text">지금까지\n<xliff:g id="size">%d</xliff:g>개의 분실물이 전달됐어요!</string>
+
+    <string name="login_email_hint">이메일</string>
+    <string name="login_password_hint">비밀번호</string>
+    <string name="login_name_hint">이름</string>
+    <string name="login_school_number_hint">학번</string>
+    <string name="login_sign_in_btn_text">로그인</string>
+    <string name="login_sign_up_btn_text">회원가입</string>
+    
+    <string name="search_text_category">카테고리</string>
+    <string name="search_lost_location">분실지역</string>
+    <string name="search_lost_date">분실날짜</string>
+    <string name="search_location_1">장소1</string>
+    <string name="search_location_2">장소2</string>
+    <string name="search_title">제목</string>
+
+    <string name="register_item_title_hint">물품명 입력</string>
+    <string name="register_item_desc_hint">상세정보 입력</string>
+    <string name="register_item_money_hint">보상금 입력</string>
+    <string name="register_item_money_guide">* 보상금? (유실물법 제4조) 물건을 반환받는 자는 물건가액의 100분의 5이상 100분의 20이하의 범위에서 보상금을 습득자에게 지급해야한다.\n* 보상금을 원하지 않는 경우 0원을 입력해주세요.</string>
+    <string name="register_item_submit_btn">등록하기</string>
+
+    <string name="select_image_failed">사진 불러오기에 실패하였습니다.</string>
+</resources>

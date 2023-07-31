@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.goldax.goldax.layout.CircleView
+        android:id="@+id/v_chat_message_profile_image"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/v_chat_message_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="200dp"
+        android:singleLine="true"
+        android:layout_marginStart="3dp"
+        android:paddingStart="15dp"
+        android:textSize="13sp"
+        android:textColor="@color/c_000000"
+        tools:text="지민지민지민지민지민지민지민지민지민지민지민지민지민지민지민지민지민지민"
+        app:layout_constraintStart_toEndOf="@+id/v_chat_message_profile_image"
+        app:layout_constraintTop_toTopOf="@+id/v_chat_message_profile_image"/>
+
+    <TextView
+        android:id="@+id/v_chat_message_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="250dp"
+        android:layout_marginStart="3dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="@color/c_ffffff"
+        android:textSize="20sp"
+        android:textColor="@color/c_4b4b4b"
+        tools:text="학쟁지원팀에 맡겼어요!"
+        app:layout_constraintStart_toEndOf="@+id/v_chat_message_profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/v_chat_message_name"/>
+
+    <TextView
+        android:id="@+id/v_chat_message_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:textSize="15sp"
+        android:textColor="@color/c_4b4b4b"
+        tools:text="14:33"
+        app:layout_constraintStart_toEndOf="@+id/v_chat_message_text"
+        app:layout_constraintBottom_toBottomOf="@+id/v_chat_message_text"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

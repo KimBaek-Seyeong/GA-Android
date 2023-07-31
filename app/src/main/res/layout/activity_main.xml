@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/a_main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/a_main_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/a_main_search_frame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/a_main_bottom_parent_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <include
+            android:id="@+id/a_main_home_layout"
+            layout="@layout/i_bottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <include
+            android:id="@+id/a_main_pick_layout"
+            layout="@layout/i_bottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <include
+            android:id="@+id/a_main_lost_layout"
+            layout="@layout/i_bottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <include
+            android:id="@+id/a_main_chat_layout"
+            layout="@layout/i_bottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+
+        <include
+            android:id="@+id/a_main_mypage_layout"
+            layout="@layout/i_bottom_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/a_main_bottom_scroll_thumb"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:background="@color/c_77FBFD"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/a_main_bottom_parent_layout"
+        app:layout_constraintBottom_toBottomOf="@+id/a_main_bottom_parent_layout"
+        />
+
+    <FrameLayout
+        android:id="@+id/a_main_full_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/a_main_loading_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:constraint_referenced_ids="a_main_loading_bg
+                                    ,a_main_loading_view" />
+
+    <View
+        android:id="@+id/a_main_loading_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/c_354187"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/a_main_loading_view"
+        android:layout_width="@dimen/main_loading_view_width"
+        android:layout_height="@dimen/main_loading_view_height"
+        android:gravity="center"
+        android:text="분신물 찾기"
+        android:textColor="@color/c_f5f5f5"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/a_main_loading_bg"
+        app:layout_constraintEnd_toEndOf="@+id/a_main_loading_bg"
+        app:layout_constraintStart_toStartOf="@+id/a_main_loading_bg"
+        app:layout_constraintTop_toTopOf="@+id/a_main_loading_bg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

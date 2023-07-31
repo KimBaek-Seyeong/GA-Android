@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#F6CE55</color>
+    <color name="colorAccent">#F1B35C</color>
+
+    <color name="color_dim">#80000000</color>
+    <color name="color_transparent">#00FFFFFF</color>
+
+    <color name="c_354187">#354187</color>
+    <color name="c_F6CE55">#F6CE55</color>
+    <color name="c_F1B35C">#F1B35C</color>
+    <color name="c_F3B55E">#F3B55E</color>
+    <color name="c_F2B35C">#F2B35C</color>
+    <color name="c_f5f5f5">#f5f5f5</color>
+    <color name="c_000000">#000000</color>
+    <color name="c_4b4b4b">#4B4B4B</color>
+    <color name="c_e6e6e6">#E6E6E6</color>
+    <color name="c_80272727">#80727272</color>
+    <color name="c_BF000000">#BF000000</color>
+    <color name="c_ffffff">#ffffff</color>
+    <color name="c_4A94EC">#4A94EC</color>
+    <color name="c_aaffffff">#aaffffff</color>
+    <color name="c_77FBFD">#77FBFD</color>
+    <color name="c_aaaaaa">#aaaaaa</color>
+    <color name="c_D8D8D8">#D8D8D8</color>
+    <color name="c_EDEDED">#EDEDED</color>
+    <color name="c_E2E2E2">#E2E2E2</color>
+    <color name="c_86FFFFFF">#86FFFFFF</color>
+</resources>

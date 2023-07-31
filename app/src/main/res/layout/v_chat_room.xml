@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shadow">
+
+    <com.goldax.goldax.layout.CircleView
+        android:id="@+id/v_chat_room_target_profile_image"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/default_profile"/>
+
+    <TextView
+        android:id="@+id/v_chat_room_target_user_name_text"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        tools:text="hzoou"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toEndOf="@+id/v_chat_room_target_profile_image"
+        app:layout_constraintTop_toTopOf="@+id/v_chat_room_target_profile_image"
+        app:layout_constraintBottom_toTopOf="@+id/v_chat_room_target_message_text"
+        app:layout_constraintVertical_chainStyle="spread"
+        />
+
+    <TextView
+        android:id="@+id/v_chat_room_target_message_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:layout_marginStart="5dp"
+        android:textSize="18sp"
+        tools:text="감사합니다!"
+        app:layout_constraintStart_toEndOf="@+id/v_chat_room_target_profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/v_chat_room_target_user_name_text"
+        app:layout_constraintBottom_toBottomOf="@+id/v_chat_room_target_profile_image"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

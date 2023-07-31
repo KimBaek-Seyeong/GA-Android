@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- view setTag key id -->
+    <attr name="key_list_data" format="reference" />
+    <attr name="key_image_path" format="string" />
+    <attr name="key_image_pos" format="integer" />
+    <attr name="key_landing_type" format="integer" />
+</resources>

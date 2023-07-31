@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="login_layout_width">300dp</dimen>
+    <dimen name="login_layout_height">45dp</dimen>
+
+    <dimen name="main_loading_view_width">181.5dp</dimen>
+    <dimen name="main_loading_view_height">50dp</dimen>
+    <dimen name="main_loading_view_margin_top">100dp</dimen>
+    <dimen name="main_loading_view_margin_bottom">10dp</dimen>
+
+    <dimen name="view_type_default_height">130dp</dimen>
+
+    <dimen name="register_popup_input_main_height">50dp</dimen>
+    <dimen name="register_popup_input_detail_height">280dp</dimen>
+    <dimen name="register_popup_input_spinner_location_height">120dp</dimen>
+    <dimen name="register_popup_rough_distance">10dp</dimen>
+    <dimen name="register_popup_detail_distance">5dp</dimen>
+</resources>

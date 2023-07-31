@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "601641668153",
+    "firebase_url": "https://goldax-aa918.firebaseio.com",
+    "project_id": "goldax-aa918",
+    "storage_bucket": "goldax-aa918.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:601641668153:android:9e07a93b8027719adfc7e8",
+        "android_client_info": {
+          "package_name": "com.goldax.goldax"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "601641668153-9jc9v5764j6opcql5irteu3nj09e8ro4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAOuYe0btcK2a5pcm_njxLtTmLJLLOTfUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "601641668153-9jc9v5764j6opcql5irteu3nj09e8ro4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

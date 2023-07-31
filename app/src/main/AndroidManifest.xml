@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.goldax.goldax">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:name="com.goldax.goldax.application.ApplicationController"
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon_px150"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:windowSoftInputMode="adjustPan"
+        android:requestLegacyExternalStorage="true"
+        android:largeHeap="true">
+        <!-- activity configChanges 옵션: 가로 세로 방향 전환 시 액티비티 재구동하지 않도록 처리 -->
+        <activity
+            android:name="com.goldax.goldax.LoginActivity"
+            android:configChanges="screenSize|orientation"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:windowSoftInputMode="adjustPan" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.goldax.goldax.MainActivity"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:windowSoftInputMode="adjustPan" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.goldax.goldax.SignUpActivity"
+            android:windowSoftInputMode="adjustPan"
+            android:launchMode="singleInstance"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.goldax.goldax.fileprovider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+    </application>
+
+</manifest>
